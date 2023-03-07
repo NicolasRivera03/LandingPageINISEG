@@ -1,0 +1,418 @@
+/* RESET STYLES */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+1. Posicionamiento
+2. Modelo de caja
+3. Tipografia
+4. Visuales
+5. Otros 
+*/
+
+:root {
+  /* colors */
+  --menu: #f56520;
+  --post-box: #81007f;
+  --button-work: #8bc24a;
+  --button-twitter: #00bdd5;
+  --button-facebook: #2297f3;
+  --last-tweet: #ea1f63;
+  --warm-black: #282623;
+  --black: #201e1c;
+  --grey: #bababa;
+  --off-white: #faf8f7;
+  --just-white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* fonts */
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  max-width: 768px;
+  padding: 0px 10px;
+  margin: 0 auto;
+  height: 700px;
+  background: url("../assets/home/background.png");
+  background-size: contain;
+  background-position: 90% 50%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0px;
+}
+
+.logo-social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-social--logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-social--logo h2 {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: var(--just-white);
+  border-right: 0.2px solid var(--just-white);
+  height: 40px;
+  padding: 8px 10px 10px 0px;
+}
+
+.logo-social--logo p {
+  display: block;
+  padding: 8px 0px 4px 10px;
+  font-size: 1.1rem;
+  color: var(--just-white);
+}
+
+.logo-social--social {
+  display: flex;
+  gap: 0px 5px;
+  padding: 10px 0px;
+}
+
+.logo-social--social a {
+  background-color: var(--just-white);
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.logo-social--social a svg {
+  path {
+    background-color: red;
+  }
+}
+
+.menu-search {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+menu {
+  display: flex;
+  gap: 0px 2px;
+}
+
+menu li {
+  list-style: none;
+}
+menu li a {
+  display: block;
+  background-color: var(--menu);
+  padding: 10px;
+  color: var(--just-white);
+  text-decoration: none;
+}
+
+menu li a:hover {
+  background-color: var(--warm-black);
+  transition-duration: 0.5s;
+}
+
+.active {
+  background-color: var(--warm-black);
+  transition-duration: 0.5s;
+}
+
+.menu-social--search form input {
+  background-color: var(--just-white);
+  opacity: 0.5;
+  border: none;
+  padding: 8px;
+  width: 130px;
+}
+
+.menu-social--search form input::placeholder {
+  padding-left: 40px;
+  font-size: 1.1rem;
+}
+
+.menu-social--search form input:focus {
+  outline: 1px solid white;
+  opacity: 0.8;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.recent-post-box {
+  background-color: var(--post-box);
+  padding: 10px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0px;
+}
+
+.recent-post-box h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--just-white);
+}
+
+.recent-post-box--post {
+  display: flex;
+  gap: 0px 10px;
+}
+
+.recent-post-box--post img {
+  width: 35px;
+  height: 35px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.recent-post-box--post__description-post {
+  display: flex;
+  place-content: center;
+  flex-direction: column;
+  gap: 6px 0px;
+}
+
+.recent-post-box--post__description-post p {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: var(--just-white);
+}
+
+.recent-post-box--post__description-post h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--just-white);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 10px;
+}
+
+.buttons__work {
+  background-color: var(--button-work);
+  border: none;
+}
+
+.buttons__work p {
+  font-size: 1.2rem;
+  color: var(--just-white);
+  font-weight: 600;
+}
+
+.buttons__twitter {
+  background-color: var(--button-twitter);
+  border: none;
+}
+
+.buttons__twitter p {
+  font-size: 1.2rem;
+  color: var(--just-white);
+  font-weight: 600;
+}
+
+.buttons__facebook {
+  background-color: var(--button-facebook);
+  border: none;
+}
+
+.buttons__facebook p {
+  font-size: 1.2rem;
+  color: var(--just-white);
+  font-weight: 600;
+}
+
+.buttons__picture {
+  background: url("../assets/home/image1.jpg");
+  border: none;
+  background-size: cover;
+  background-position: 50% 70%;
+}
+
+.google-maps iframe {
+  width: 240px;
+  height: 245px;
+}
+
+.picture-one {
+  background: url("../assets/home/image2.jpg");
+  border: none;
+  background-size: cover;
+  background-position: 50% 70%;
+}
+
+.latest-tweet-box {
+  background-color: var(--last-tweet);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0px;
+}
+
+.latest-tweet-box h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--just-white);
+}
+
+.latest-tweet-box p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: var(--just-white);
+}
+
+.picture-two {
+  height: 150px;
+  background: url("../assets/home/image3.jpg");
+  border: none;
+  background-size: cover;
+  background-position: 50% 90%;
+}
