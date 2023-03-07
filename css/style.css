@@ -164,9 +164,9 @@ body {
   max-width: 768px;
   padding: 0px 10px;
   margin: 0 auto;
-  height: 700px;
+  height: 100vh;
   background: url("../assets/home/background.png");
-  background-size: contain;
+  background-size: cover;
   background-position: 90% 50%;
 }
 
